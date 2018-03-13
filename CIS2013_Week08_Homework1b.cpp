@@ -10,8 +10,8 @@ int main (){
 	ifstream in_a;
 	string level_select;
 	bool level_selection = true;
-	char levelx [10];
-	char levely [10];
+	char level [10][10];
+	
 	
 	while (level_selection){
 		cout << "Please select a level from the list:" << endl;
@@ -33,13 +33,19 @@ int main (){
 	
 	for(int i=0; i < 10; i++){
 		
-		cout << endl;
 		for(int j=0; j < 10; j++){
-		in_a >> levelx;
-		cout << levelx << " ";
+			in_a >> level[i][j];
+		}
+		
 	}
-		//in_a >> levelx;
-		//cout << levelx;
+	
+	//Test to verify information is being stored in array
+	for(int i=0; i < 10; i++){
+		
+		for(int j=0; j < 10; j++){
+			cout << level[i][j] << " ";
+		}
+		cout << endl;
 	}
 	
 	
